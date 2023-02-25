@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div class="headerweb">
+        <img class="logo-spkt-icon" alt="" src="public/logospkt@2x.png" /><b
+          class="headercontent"
+          ><span class="headercontent-txt"
+            ><p class="thc-tp-kin">THỰC TẬP KIẾN TRÚC VÀ GIAO THỨC IOT</p>
+            <p class="thc-tp-kin">&nbsp;</p>
+            <p class="qun-l-nh">QUẢN LÝ NHÀ THÔNG MINH</p></span
+          ></b
+        ><img class="icon" alt="" src="public/icon@2x.png" />
+      </div>
+      <div class="bodyweb">
+        <div class="menutab">
+          <b class="room">Room</b>
+          <div class="room1">
+            <div class="livingroom">
+              <img class="image-4-icon" alt="" src="public/image-4@2x.png" />
+              <button class="tablinks" onclick="openCity(event, 'tablivingroom')"
+                >Living room</button
+              >
+            </div>
+            <div class="kitchenroom">
+              <img
+                class="image-4-icon"
+                alt=""
+                src="public/ellipse-1@2x.png"
+              /><button class="tablinks" onclick="openCity(event, 'tabkitchenroom')">Kitchen room</button>
+            </div>
+            <div class="bedroom">
+              <img
+                class="image-4-icon"
+                alt=""
+                src="public/ellipse-2@2x.png"
+              /><button class="tablinks" onclick="openCity(event, 'tabbedroom')">Bed room</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="listtab">
+
+          <div id="tablivingroom" class="tabcontent active">
+            <div class="displaycontent">
+              <div class="sensor">
+                <div class="temp">
+                  <img class="image-75-icon" alt="" src="public/image-75@2x.png" />
+                  <div class="contenttemp">
+                    <div class="component-1">
+                      <b class="b">25℃</b><b class="nhit">Nhiệt độ</b>
+                    </div>
+                    <img
+                      class="contenttemp-child"
+                      alt=""
+                      src="public/rectangle-1095.svg"
+                    />
+                  </div>
+                </div>
+                <div class="hum">
+                  <img class="image-76-icon" alt="" src="public/image-76@2x.png" />
+                  <div class="contenthum">
+                    <img
+                      class="contenthum-child"
+                      alt=""
+                      src="public/rectangle-1092.svg"
+                    />
+                    <div class="component-3">
+                      <b class="b1"><p class="thc-tp-kin">90%</p></b
+                      ><b class="nhit">Độ ẩm</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="light">
+                  <img class="image-77-icon" alt="" src="public/image-77@2x.png" />
+                  <div class="contenthum">
+                    <img
+                      class="contenthum-child"
+                      alt=""
+                      src="public/rectangle-1093.svg"
+                    />
+                    <div class="component-5">
+                      <b class="cd">240cd</b><b class="nhit">Ánh sáng</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="light">
+                  <img class="image-73-icon" alt="" src="public/image-73@2x.png" />
+                  <div class="contenthum">
+                    <img
+                      class="contenthum-child"
+                      alt=""
+                      src="public/rectangle-1094.svg"
+                    />
+                    <div class="component-7">
+                      <b class="an-ton">An toàn</b><b class="kh-gas">Khí gas</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="device">
+                <b class="device1">Device 1</b>
+                <div class="row1">
+                  <div class="wifi">
+                    <div class="frame-parent">
+                      <div class="wifi-parent">
+                        <img class="wifi-icon" alt="" src="public/wifi.svg" />
+                        <div class="on-off-button">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="wifi1">Wifi</b>
+                    </div>
+                  </div>
+                  <div class="smartlight" id ="light">
+                    <div class="frame-group">
+                      <div class="light-on-off-parent" >
+                        <img
+                          id = "light_img"
+                          class="light-on-off"
+                          alt=""
+                          src="public/light_off.png"
+                        />
+                        <div class="on-off-button1">
+                          <label class="toggle-switch" >
+                            <input type="checkbox" id = "switch_light" >
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="living-room">Smart Light</b>
+                    </div>
+                  </div>
+                  <div class="smartair">
+                    <div class="frame-container">
+                      <div class="air-parent">
+                        <img class="air-icon" alt="" src="public/air.svg" />
+                        <div class="on-off-button">
+                          <div class="on-off-button-child">
+                            <label class="toggle-switch">
+                              <input type="checkbox">
+                              <span class="toggle-slider"></span>
+                            </label>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <b class="smart-air">Smart Air</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="row2">
+                  <div class="music">
+                    <div class="frame-div">
+                      <div class="fluentmusic-note-2-16-regular-parent">
+                        <img
+                          class="fluentmusic-note-2-16-regular-icon"
+                          alt=""
+                          src="public/fluentmusicnote216regular.svg"
+                        />
+                        <div class="on-off-button">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="living-room">Music</b>
+                    </div>
+                  </div>
+                  <div class="smarttv">
+                    <div class="frame-parent1">
+                      <div class="tv-parent">
+                        <img class="tv-icon" alt="" src="public/tv.svg" />
+                        <div class="on-off-button">
+                          <div class="on-off-button-child">
+                            <label class="toggle-switch">
+                              <input type="checkbox">
+                              <span class="toggle-slider"></span>
+                            </label>
+                          </div>
+                        
+                        </div>
+                      </div>
+                      <b class="living-room">Smart TV</b>
+                    </div>
+                  </div>
+                  <div class="smart-fan">
+                    <div class="frame-group">
+                      <div class="frame-parent3">
+                        <img class="frame-icon" alt="" src="public/frame.svg" />
+                        <div class="on-off-button">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="living-room">Smart Fan</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tabkitchenroom" class="tabcontent">
+            <div class="displaycontent">
+              <div class="sensor">
+                <div class="temp">
+                  <img class="image-75-icon" alt="" src="public/image-75@2x.png" />
+                  <div class="contenttemp">
+                    <div class="component-1">
+                      <b class="b">30℃</b><b class="nhit">Nhiệt độ</b>
+                    </div>
+                    <img
+                      class="contenttemp-child"
+                      alt=""
+                      src="public/rectangle-1095.svg"
+                    />
+                  </div>
+                </div>
+                <div class="hum">
+                  <img class="image-76-icon" alt="" src="public/image-76@2x.png" />
+                  <div class="contenthum">
+                    <img
+                      class="contenthum-child"
+                      alt=""
+                      src="public/rectangle-1092.svg"
+                    />
+                    <div class="component-3">
+                      <b class="b1"><p class="thc-tp-kin">90%</p></b
+                      ><b class="nhit">Độ ẩm</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="light">
+                  <img class="image-77-icon" alt="" src="public/image-77@2x.png" />
+                  <div class="contenthum">
+                    <img
+                      class="contenthum-child"
+                      alt=""
+                      src="public/rectangle-1093.svg"
+                    />
+                    <div class="component-5">
+                      <b class="cd">250cd</b><b class="nhit">Ánh sáng</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="light">
+                  <img class="image-73-icon" alt="" src="public/image-73@2x.png" />
+                  <div class="contenthum">
+                    <img
+                      class="contenthum-child"
+                      alt=""
+                      src="public/rectangle-1094.svg"
+                    />
+                    <div class="component-7">
+                      <b class="an-ton">An toàn</b><b class="kh-gas">Khí gas</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="device">
+                <b class="device1">Device 2</b>
+                <div class="row1">
+                  <div class="wifi">
+                    <div class="frame-parent">
+                      <div class="wifi-parent">
+                        <img class="wifi-icon" alt="" src="public/wifi.svg" />
+                        <div class="on-off-button">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="wifi1">Wifi</b>
+                    </div>
+                  </div>
+                  <div class="smartlight">
+                    <div class="frame-group">
+                      <div class="light-on-off-parent">
+                        <img
+                          class="light-on-off"
+                          alt=""
+                          src="public/light--on--off.svg"
+                        />
+                        <div class="on-off-button1">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="living-room">Smart Light</b>
+                    </div>
+                  </div>
+                  <div class="smartair">
+                    <div class="frame-container">
+                      <div class="air-parent">
+                        <img class="air-icon" alt="" src="public/air.svg" />
+                        <div class="on-off-button">
+                          <div class="on-off-button-child">
+                            <label class="toggle-switch">
+                              <input type="checkbox">
+                              <span class="toggle-slider"></span>
+                            </label>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <b class="smart-air">Smart Air</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="row2">
+                  <div class="music">
+                    <div class="frame-div">
+                      <div class="fluentmusic-note-2-16-regular-parent">
+                        <img
+                          class="fluentmusic-note-2-16-regular-icon"
+                          alt=""
+                          src="public/fluentmusicnote216regular.svg"
+                        />
+                        <div class="on-off-button">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="living-room">Music</b>
+                    </div>
+                  </div>
+                  <div class="smarttv">
+                    <div class="frame-parent1">
+                      <div class="tv-parent">
+                        <img class="tv-icon" alt="" src="public/tv.svg" />
+                        <div class="on-off-button">
+                          <div class="on-off-button-child">
+                            <label class="toggle-switch">
+                              <input type="checkbox">
+                              <span class="toggle-slider"></span>
+                            </label>
+                          </div>
+                        
+                        </div>
+                      </div>
+                      <b class="living-room">Smart TV</b>
+                    </div>
+                  </div>
+                  <div class="smart-fan">
+                    <div class="frame-group">
+                      <div class="frame-parent3">
+                        <img class="frame-icon" alt="" src="public/frame.svg" />
+                        <div class="on-off-button">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="living-room">Smart Fan</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="tabbedroom" class="tabcontent">
+            <div class="displaycontent">
+              <div class="sensor">
+                <div class="temp">
+                  <img class="image-75-icon" alt="" src="public/image-75@2x.png" />
+                  <div class="contenttemp">
+                    <div class="component-1">
+                      <b class="b">27℃</b><b class="nhit">Nhiệt độ</b>
+                    </div>
+                    <img
+                      class="contenttemp-child"
+                      alt=""
+                      src="public/rectangle-1095.svg"
+                    />
+                  </div>
+                </div>
+                <div class="hum">
+                  <img class="image-76-icon" alt="" src="public/image-76@2x.png" />
+                  <div class="contenthum">
+                    <img
+                      class="contenthum-child"
+                      alt=""
+                      src="public/rectangle-1092.svg"
+                    />
+                    <div class="component-3">
+                      <b class="b1"><p class="thc-tp-kin">92%</p></b
+                      ><b class="nhit">Độ ẩm</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="light">
+                  <img class="image-77-icon" alt="" src="public/image-77@2x.png" />
+                  <div class="contenthum">
+                    <img
+                      class="contenthum-child"
+                      alt=""
+                      src="public/rectangle-1093.svg"
+                    />
+                    <div class="component-5">
+                      <b class="cd">240cd</b><b class="nhit">Ánh sáng</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="light">
+                  <img class="image-73-icon" alt="" src="public/image-73@2x.png" />
+                  <div class="contenthum">
+                    <img
+                      class="contenthum-child"
+                      alt=""
+                      src="public/rectangle-1094.svg"
+                    />
+                    <div class="component-7">
+                      <b class="an-ton">An toàn</b><b class="kh-gas">Khí gas</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="device">
+                <b class="device1">Device 3</b>
+                <div class="row1">
+                  <div class="wifi">
+                    <div class="frame-parent">
+                      <div class="wifi-parent">
+                        <img class="wifi-icon" alt="" src="public/wifi.svg" />
+                        <div class="on-off-button">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="wifi1">Wifi</b>
+                    </div>
+                  </div>
+                  <div class="smartlight">
+                    <div class="frame-group">
+                      <div class="light-on-off-parent">
+                        <img
+                          class="light-on-off"
+                          alt=""
+                          src="public/light--on--off.svg"
+                        />
+                        <div class="on-off-button1">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="living-room">Smart Light</b>
+                    </div>
+                  </div>
+                  <div class="smartair">
+                    <div class="frame-container">
+                      <div class="air-parent">
+                        <img class="air-icon" alt="" src="public/air.svg" />
+                        <div class="on-off-button">
+                          <div class="on-off-button-child">
+                            <label class="toggle-switch">
+                              <input type="checkbox">
+                              <span class="toggle-slider"></span>
+                            </label>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      <b class="smart-air">Smart Air</b>
+                    </div>
+                  </div>
+                </div>
+                <div class="row2">
+                  <div class="music">
+                    <div class="frame-div">
+                      <div class="fluentmusic-note-2-16-regular-parent">
+                        <img
+                          class="fluentmusic-note-2-16-regular-icon"
+                          alt=""
+                          src="public/fluentmusicnote216regular.svg"
+                        />
+                        <div class="on-off-button">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="living-room">Music</b>
+                    </div>
+                  </div>
+                  <div class="smarttv">
+                    <div class="frame-parent1">
+                      <div class="tv-parent">
+                        <img class="tv-icon" alt="" src="public/tv.svg" />
+                        <div class="on-off-button">
+                          <div class="on-off-button-child">
+                            <label class="toggle-switch">
+                              <input type="checkbox">
+                              <span class="toggle-slider"></span>
+                            </label>
+                          </div>
+                        
+                        </div>
+                      </div>
+                      <b class="living-room">Smart TV</b>
+                    </div>
+                  </div>
+                  <div class="smart-fan">
+                    <div class="frame-group">
+                      <div class="frame-parent3">
+                        <img class="frame-icon" alt="" src="public/frame.svg" />
+                        <div class="on-off-button">
+                          <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                          </label>
+                        </div>
+                      </div>
+                      <b class="living-room">Smart Fan</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+
+      <div class="footerweb">
+        <div class="thnh-vin-2-wrapper">
+          <div class="thnh-vin-2">
+            <img
+              class="thnh-vin-2-child"
+              alt=""
+              src="public/ellipse-11@2x.png"
+            /><b class="lng-v-hi-container"
+              ><p class="thc-tp-kin">Lượng Vũ Hải Ninh</p>
+              <p class="qun-l-nh">20139083</p></b
+            >
+          </div>
+        </div>
+        <div class="thnh-vin-1-wrapper">
+          <div class="thnh-vin-2">
+            <img
+              class="thnh-vin-2-child"
+              alt=""
+              src="public/ellipse-12@2x.png"
+            /><b class="lng-v-hi-container"
+              ><p class="thc-tp-kin">Nguyễn Minh Tuấn</p>
+              <p class="qun-l-nh">20139095</p></b
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="control.js"></script>
+</html>

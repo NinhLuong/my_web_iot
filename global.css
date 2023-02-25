@@ -1,0 +1,32 @@
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-noto-sans: "Noto Sans";
+
+  /* font sizes */
+  --font-size-base: 18px;
+  --font-size-lg: 25px;
+  --font-size-xl: 30px;
+
+  /* Colors */
+  --color-black: #000;
+  --color-gainsboro: #e8e8e8;
+  --color-darkslategray: #464646;
+  --color-dimgray: #5c5c5c;
+
+  /* Gaps */
+  --gap-sm: 17px;
+  --gap-md: 31px;
+  --gap-lg: 40px;
+
+  /* Paddings */
+  --padding-xs: 10px;
+  --padding-sm: 18px;
+  --padding-md: 19px;
+  --padding-lg: 23px;
+
+  /* border radiuses */
+  --br-sm: 20px;
+  --br-md: 30px;
+  --br-lg: 100px;
+}
