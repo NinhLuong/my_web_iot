@@ -49,11 +49,19 @@ body {
   flex-direction: row;
   padding: 0 28px;
   box-sizing: border-box;
-  gap: 134px;
+  gap: 140px;
+}
+
+.home-icon{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  object-fit: cover;
 }
 .room {
   position: relative;
-  width: 328px;
+  width: 340px;
 }
 .image-4-icon {
   width: 100px;
@@ -67,7 +75,7 @@ body {
 }
 .kitchenroom,
 .livingroom {
-  width: 328px;
+  width: 330px;
   display: flex;
   align-items: center;
 }
@@ -85,7 +93,7 @@ body {
   align-items: center;
 }
 .bedroom {
-  width: 328px;
+  width: 320px;
   flex-direction: row;
   justify-content: flex-start;
   gap: 30px;
@@ -96,22 +104,22 @@ body {
   justify-content: center;
 }
 .room1 {
-  gap: 32px;
+  gap: 30px;
   font-size: var(--font-size-xl);
+  backdrop-filter: blur(5px) brightness(100%);
+  background-color: #f7f5f5e7;
+  border-radius: 30px;
+  padding: 5px 5px;
 }
 .menutab {
   width: 328px;
   height: 458px;
   flex-shrink: 0;
-  gap: var(--gap-lg);
-  backdrop-filter: blur(5px) brightness(100%);
-  background-color: #f7f5f5e7;
-  border-radius: 30px;
-  padding: 20px 10px;
+
 }
 .image-75-icon {
   height: 57.32%;
-  width: 11.92%;
+  width: 23.92%;
   top: 17.07%;
   right: 88.08%;
   bottom: 25.61%;
@@ -121,18 +129,35 @@ body {
   max-height: 100%;
   object-fit: cover;
 }
+
+.sonhiet,
 .b,
 .image-75-icon,
 .nhit {
   position: absolute;
 }
+.sonhiet{
+  height: 52.73%;
+  width: 52.56%;
+  top: 47.27%;
+  left: 20.95%;
+  display: inline-block;
+  color: black;
+}
 .b {
   height: 52.73%;
   width: 52.56%;
   top: 47.27%;
-  left: 17.95%;
+  left: 48.95%;
   display: inline-block;
+  color: black;
 }
+.nhit1 {
+  top: 0;
+  left: 5;
+  color: black;
+}
+
 .nhit {
   top: 0;
   left: 0;
@@ -160,6 +185,7 @@ body {
   overflow: hidden;
   max-height: 100%;
   opacity: 0.3;
+  background-color: #c3c3c3;
 }
 .contenttemp {
   position: absolute;
@@ -183,6 +209,7 @@ body {
   max-width: 100%;
   overflow: hidden;
   max-height: 100%;
+  
 }
 .image-76-icon {
   height: 56%;
@@ -193,6 +220,7 @@ body {
   object-fit: cover;
 }
 .contenthum-child {
+  background-color: #d0d0d0;
   height: 100%;
   width: 100%;
   top: 0;
@@ -201,14 +229,25 @@ body {
   border-radius: var(--br-md);
   opacity: 0.3;
 }
+
+.sohum,
 .b1 {
   position: absolute;
   height: 53.7%;
   width: 70.69%;
   top: 46.3%;
-  left: 15.52%;
+  left: 50.52%;
   display: inline-block;
 }
+.sohum{
+  position: absolute;
+  height: 53.7%;
+  width: 70.69%;
+  top: 46.3%;
+  left: 10.52%;
+  display: inline-block;
+}
+
 .component-3,
 .contenthum {
   position: absolute;
@@ -246,7 +285,16 @@ body {
   max-height: 100%;
   object-fit: cover;
 }
+.sonlight,
 .cd {
+  position: absolute;
+  height: 48.33%;
+  width: 67.86%;
+  top: 51.67%;
+  left: 50.71%;
+  display: inline-block;
+}
+.sonlight{
   position: absolute;
   height: 48.33%;
   width: 67.86%;
@@ -271,7 +319,7 @@ body {
 }
 .image-73-icon {
   height: 50.67%;
-  width: 16.49%;
+  width: 19.5%;
   top: 17.33%;
   right: 83.51%;
   bottom: 32%;
@@ -313,7 +361,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  gap: 50px;
+  gap: 60px;
 }
 .device1 {
   position: relative;
@@ -477,7 +525,7 @@ body {
 .row1 {
   flex-direction: row;
   align-items: center;
-  gap: 50px;
+  gap: 58px;
 }
 .fluentmusic-note-2-16-regular-icon {
   position: relative;
@@ -512,8 +560,8 @@ body {
 }
 .tv-icon {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   flex-shrink: 0;
 }
 .frame-parent1,
@@ -533,12 +581,12 @@ body {
 }
 .frame-parent1 {
   align-items: center;
-  gap: 22px;
+  gap: 20px;
 }
 .smarttv {
   border-radius: var(--br-sm);
   background-color: var(--color-gainsboro);
-  padding: 24px var(--padding-md);
+  padding: 20px var(--padding-md);
   align-items: flex-start;
 }
 .frame-icon {
@@ -576,7 +624,7 @@ body {
 .device {
   backdrop-filter: blur(4px) brightness(100%);
   padding: 15px 22px;
-  background-color: #f9f9f9;
+  background-color: #f3f3f3;
   border-radius: 30px;
   flex-direction: column;
   align-items: flex-end;
@@ -584,6 +632,7 @@ body {
 }
 .bodyweb,
 .displaycontent {
+  
   height: 458px;
   flex-shrink: 0;
   display: flex;
@@ -676,6 +725,13 @@ body {
   font-family: var(--font-inter);
 }
 
+.menutab button:hover {
+  background-color: #ddd;
+  padding: 20px 16px;
+  border-radius: 7px;
+
+}
+
 .tabcontent {
   display: none;
 }
@@ -694,15 +750,8 @@ body {
   transition: 0.3s;
 }
 
-.menutab button:hover {
-  background-color: #ddd;
-  padding: 20px 16px;
-  border-radius: 7px;
-
-}
-
 /* Create an active/current tablink class */
-.menutab button.active {
+.menutab  button.active {
   background-color: #ccc;
   padding: 20px 16px;
   border-radius: 7px;

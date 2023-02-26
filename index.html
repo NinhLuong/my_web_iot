@@ -30,11 +30,11 @@
       </div>
       <div class="bodyweb">
         <div class="menutab">
-          <b class="room">Room</b>
+          <img class="home-icon" alt="" src="public/home.png" />
           <div class="room1">
             <div class="livingroom">
-              <img class="image-4-icon" alt="" src="public/image-4@2x.png" />
-              <button class="tablinks" onclick="openCity(event, 'tablivingroom')"
+              <img class="image-4-icon" alt="" src="public/lingroom_img.png" />
+              <button class="tablinks active" onclick="openroom(event, 'tablivingroom')"
                 >Living room</button
               >
             </div>
@@ -43,14 +43,14 @@
                 class="image-4-icon"
                 alt=""
                 src="public/ellipse-1@2x.png"
-              /><button class="tablinks" onclick="openCity(event, 'tabkitchenroom')">Kitchen room</button>
+              /><button class="tablinks" onclick="openroom(event, 'tabkitchenroom')">Kitchen room</button>
             </div>
             <div class="bedroom">
               <img
                 class="image-4-icon"
                 alt=""
                 src="public/ellipse-2@2x.png"
-              /><button class="tablinks" onclick="openCity(event, 'tabbedroom')">Bed room</button>
+              /><button class="tablinks" onclick="openroom(event, 'tabbedroom')">Bed room</button>
             </div>
           </div>
         </div>
@@ -61,10 +61,12 @@
             <div class="displaycontent">
               <div class="sensor">
                 <div class="temp">
-                  <img class="image-75-icon" alt="" src="public/image-75@2x.png" />
+                  <img class="image-75-icon" alt="" src="public/nhietdo.png" />
                   <div class="contenttemp">
                     <div class="component-1">
-                      <b class="b">25℃</b><b class="nhit">Nhiệt độ</b>
+                      <b class="sonhiet" id="nhietdo">25</b>
+                      <b class="b">℃</b>
+                      <b class="nhit1">Nhiệt độ</b>
                     </div>
                     <img
                       class="contenttemp-child"
@@ -74,7 +76,7 @@
                   </div>
                 </div>
                 <div class="hum">
-                  <img class="image-76-icon" alt="" src="public/image-76@2x.png" />
+                  <img class="image-76-icon" alt="" src="public/doam.png" />
                   <div class="contenthum">
                     <img
                       class="contenthum-child"
@@ -82,13 +84,14 @@
                       src="public/rectangle-1092.svg"
                     />
                     <div class="component-3">
-                      <b class="b1"><p class="thc-tp-kin">90%</p></b
+                      <b class="sohum" id="doam">90</b>
+                      <b class="b1"><p class="thc-tp-kin">%</p></b
                       ><b class="nhit">Độ ẩm</b>
                     </div>
                   </div>
                 </div>
                 <div class="light">
-                  <img class="image-77-icon" alt="" src="public/image-77@2x.png" />
+                  <img class="image-77-icon" alt="" src="public/anhsang.png" />
                   <div class="contenthum">
                     <img
                       class="contenthum-child"
@@ -96,12 +99,14 @@
                       src="public/rectangle-1093.svg"
                     />
                     <div class="component-5">
-                      <b class="cd">240cd</b><b class="nhit">Ánh sáng</b>
+                      <b class="sonlight" id="anhsang">220</b>
+                      <b class="cd">cd</b>
+                      <b class="nhit">Ánh sáng</b>
                     </div>
                   </div>
                 </div>
                 <div class="light">
-                  <img class="image-73-icon" alt="" src="public/image-73@2x.png" />
+                  <img class="image-73-icon" alt="" src="public/khiga.png" />
                   <div class="contenthum">
                     <img
                       class="contenthum-child"
@@ -109,7 +114,7 @@
                       src="public/rectangle-1094.svg"
                     />
                     <div class="component-7">
-                      <b class="an-ton">An toàn</b><b class="kh-gas">Khí gas</b>
+                      <b class="an-ton" id="khiga" >An toàn</b><b class="kh-gas">Khí gas</b>
                     </div>
                   </div>
                 </div>
@@ -117,13 +122,13 @@
               <div class="device">
                 <b class="device1">Device 1</b>
                 <div class="row1">
-                  <div class="wifi">
+                  <div class="wifi" id="wifi">
                     <div class="frame-parent">
                       <div class="wifi-parent">
-                        <img class="wifi-icon" alt="" src="public/wifi.svg" />
+                        <img id="wifi_img" class="wifi-icon" alt="" src="public/wifi.svg" />
                         <div class="on-off-button">
                           <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="switch_wifi">
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -150,14 +155,14 @@
                       <b class="living-room">Smart Light</b>
                     </div>
                   </div>
-                  <div class="smartair">
+                  <div class="smartair" id="air">
                     <div class="frame-container">
                       <div class="air-parent">
-                        <img class="air-icon" alt="" src="public/air.svg" />
+                        <img id="air_img" class="air-icon" alt="" src="public/air.svg" />
                         <div class="on-off-button">
                           <div class="on-off-button-child">
                             <label class="toggle-switch">
-                              <input type="checkbox">
+                              <input id="switch_air" type="checkbox">
                               <span class="toggle-slider"></span>
                             </label>
                           </div>
@@ -169,17 +174,17 @@
                   </div>
                 </div>
                 <div class="row2">
-                  <div class="music">
+                  <div class="music" id="music">
                     <div class="frame-div">
                       <div class="fluentmusic-note-2-16-regular-parent">
-                        <img
+                        <img id="music_img"
                           class="fluentmusic-note-2-16-regular-icon"
                           alt=""
                           src="public/fluentmusicnote216regular.svg"
                         />
                         <div class="on-off-button">
                           <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input id="switch_music" type="checkbox">
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -187,14 +192,14 @@
                       <b class="living-room">Music</b>
                     </div>
                   </div>
-                  <div class="smarttv">
+                  <div class="smarttv" id="tv">
                     <div class="frame-parent1">
                       <div class="tv-parent">
-                        <img class="tv-icon" alt="" src="public/tv.svg" />
+                        <img id="tv_img" class="tv-icon" alt="" src="public/tv.svg" />
                         <div class="on-off-button">
                           <div class="on-off-button-child">
                             <label class="toggle-switch">
-                              <input type="checkbox">
+                              <input id="switch_tv" type="checkbox">
                               <span class="toggle-slider"></span>
                             </label>
                           </div>
@@ -204,13 +209,13 @@
                       <b class="living-room">Smart TV</b>
                     </div>
                   </div>
-                  <div class="smart-fan">
+                  <div class="smart-fan" id="fan">
                     <div class="frame-group">
                       <div class="frame-parent3">
-                        <img class="frame-icon" alt="" src="public/frame.svg" />
+                        <img id="fan_img" class="frame-icon" alt="" src="public/frame.svg" />
                         <div class="on-off-button">
                           <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input id="switch_fan" type="checkbox">
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -227,10 +232,12 @@
             <div class="displaycontent">
               <div class="sensor">
                 <div class="temp">
-                  <img class="image-75-icon" alt="" src="public/image-75@2x.png" />
+                  <img class="image-75-icon" alt="" src="public/nhietdo.png" />
                   <div class="contenttemp">
                     <div class="component-1">
-                      <b class="b">30℃</b><b class="nhit">Nhiệt độ</b>
+                      <b class="sonhiet" id="nhietdo">25</b>
+                      <b class="b">℃</b>
+                      <b class="nhit1">Nhiệt độ</b>
                     </div>
                     <img
                       class="contenttemp-child"
@@ -240,7 +247,7 @@
                   </div>
                 </div>
                 <div class="hum">
-                  <img class="image-76-icon" alt="" src="public/image-76@2x.png" />
+                  <img class="image-76-icon" alt="" src="public/doam.png" />
                   <div class="contenthum">
                     <img
                       class="contenthum-child"
@@ -248,13 +255,14 @@
                       src="public/rectangle-1092.svg"
                     />
                     <div class="component-3">
-                      <b class="b1"><p class="thc-tp-kin">90%</p></b
+                      <b class="sohum" id="doam">90</b>
+                      <b class="b1"><p class="thc-tp-kin">%</p></b
                       ><b class="nhit">Độ ẩm</b>
                     </div>
                   </div>
                 </div>
                 <div class="light">
-                  <img class="image-77-icon" alt="" src="public/image-77@2x.png" />
+                  <img class="image-77-icon" alt="" src="public/anhsang.png" />
                   <div class="contenthum">
                     <img
                       class="contenthum-child"
@@ -262,12 +270,14 @@
                       src="public/rectangle-1093.svg"
                     />
                     <div class="component-5">
-                      <b class="cd">250cd</b><b class="nhit">Ánh sáng</b>
+                      <b class="sonlight" id="anhsang">220</b>
+                      <b class="cd">cd</b>
+                      <b class="nhit">Ánh sáng</b>
                     </div>
                   </div>
                 </div>
                 <div class="light">
-                  <img class="image-73-icon" alt="" src="public/image-73@2x.png" />
+                  <img class="image-73-icon" alt="" src="public/khiga.png" />
                   <div class="contenthum">
                     <img
                       class="contenthum-child"
@@ -275,7 +285,7 @@
                       src="public/rectangle-1094.svg"
                     />
                     <div class="component-7">
-                      <b class="an-ton">An toàn</b><b class="kh-gas">Khí gas</b>
+                      <b class="an-ton" id="khiga" >An toàn</b><b class="kh-gas">Khí gas</b>
                     </div>
                   </div>
                 </div>
@@ -283,13 +293,13 @@
               <div class="device">
                 <b class="device1">Device 2</b>
                 <div class="row1">
-                  <div class="wifi">
+                  <div class="wifi" id="wifi1">
                     <div class="frame-parent">
                       <div class="wifi-parent">
-                        <img class="wifi-icon" alt="" src="public/wifi.svg" />
+                        <img id="wifi_img1" class="wifi-icon" alt="" src="public/wifi.svg" />
                         <div class="on-off-button">
                           <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="switch_wifi1">
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -297,17 +307,18 @@
                       <b class="wifi1">Wifi</b>
                     </div>
                   </div>
-                  <div class="smartlight">
+                  <div class="smartlight" id ="light1">
                     <div class="frame-group">
-                      <div class="light-on-off-parent">
+                      <div class="light-on-off-parent" >
                         <img
+                          id = "light_img1"
                           class="light-on-off"
                           alt=""
-                          src="public/light--on--off.svg"
+                          src="public/light_off.png"
                         />
                         <div class="on-off-button1">
-                          <label class="toggle-switch">
-                            <input type="checkbox">
+                          <label class="toggle-switch" >
+                            <input type="checkbox" id = "switch_light1" >
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -315,14 +326,14 @@
                       <b class="living-room">Smart Light</b>
                     </div>
                   </div>
-                  <div class="smartair">
+                  <div class="smartair" id="air1">
                     <div class="frame-container">
                       <div class="air-parent">
-                        <img class="air-icon" alt="" src="public/air.svg" />
+                        <img id="air_img1" class="air-icon" alt="" src="public/air.svg" />
                         <div class="on-off-button">
                           <div class="on-off-button-child">
                             <label class="toggle-switch">
-                              <input type="checkbox">
+                              <input id="switch_air1" type="checkbox">
                               <span class="toggle-slider"></span>
                             </label>
                           </div>
@@ -334,17 +345,17 @@
                   </div>
                 </div>
                 <div class="row2">
-                  <div class="music">
+                  <div class="music" id="music1">
                     <div class="frame-div">
                       <div class="fluentmusic-note-2-16-regular-parent">
-                        <img
+                        <img id="music_img1"
                           class="fluentmusic-note-2-16-regular-icon"
                           alt=""
                           src="public/fluentmusicnote216regular.svg"
                         />
                         <div class="on-off-button">
                           <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input id="switch_music1" type="checkbox">
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -352,14 +363,14 @@
                       <b class="living-room">Music</b>
                     </div>
                   </div>
-                  <div class="smarttv">
+                  <div class="smarttv" id="tv1">
                     <div class="frame-parent1">
                       <div class="tv-parent">
-                        <img class="tv-icon" alt="" src="public/tv.svg" />
+                        <img id="tv_img1" class="tv-icon" alt="" src="public/tv.svg" />
                         <div class="on-off-button">
                           <div class="on-off-button-child">
                             <label class="toggle-switch">
-                              <input type="checkbox">
+                              <input id="switch_tv1" type="checkbox">
                               <span class="toggle-slider"></span>
                             </label>
                           </div>
@@ -369,13 +380,13 @@
                       <b class="living-room">Smart TV</b>
                     </div>
                   </div>
-                  <div class="smart-fan">
+                  <div class="smart-fan" id="fan1">
                     <div class="frame-group">
                       <div class="frame-parent3">
-                        <img class="frame-icon" alt="" src="public/frame.svg" />
+                        <img id="fan_img1" class="frame-icon" alt="" src="public/frame.svg" />
                         <div class="on-off-button">
                           <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input id="switch_fan1" type="checkbox">
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -392,10 +403,12 @@
             <div class="displaycontent">
               <div class="sensor">
                 <div class="temp">
-                  <img class="image-75-icon" alt="" src="public/image-75@2x.png" />
+                  <img class="image-75-icon" alt="" src="public/nhietdo.png" />
                   <div class="contenttemp">
                     <div class="component-1">
-                      <b class="b">27℃</b><b class="nhit">Nhiệt độ</b>
+                      <b class="sonhiet" id="nhietdo">27</b>
+                      <b class="b">℃</b>
+                      <b class="nhit1">Nhiệt độ</b>
                     </div>
                     <img
                       class="contenttemp-child"
@@ -405,7 +418,7 @@
                   </div>
                 </div>
                 <div class="hum">
-                  <img class="image-76-icon" alt="" src="public/image-76@2x.png" />
+                  <img class="image-76-icon" alt="" src="public/doam.png" />
                   <div class="contenthum">
                     <img
                       class="contenthum-child"
@@ -413,13 +426,14 @@
                       src="public/rectangle-1092.svg"
                     />
                     <div class="component-3">
-                      <b class="b1"><p class="thc-tp-kin">92%</p></b
+                      <b class="sohum" id="doam">80</b>
+                      <b class="b1"><p class="thc-tp-kin">%</p></b
                       ><b class="nhit">Độ ẩm</b>
                     </div>
                   </div>
                 </div>
                 <div class="light">
-                  <img class="image-77-icon" alt="" src="public/image-77@2x.png" />
+                  <img class="image-77-icon" alt="" src="public/anhsang.png" />
                   <div class="contenthum">
                     <img
                       class="contenthum-child"
@@ -427,12 +441,14 @@
                       src="public/rectangle-1093.svg"
                     />
                     <div class="component-5">
-                      <b class="cd">240cd</b><b class="nhit">Ánh sáng</b>
+                      <b class="sonlight" id="anhsang">200</b>
+                      <b class="cd">cd</b>
+                      <b class="nhit">Ánh sáng</b>
                     </div>
                   </div>
                 </div>
                 <div class="light">
-                  <img class="image-73-icon" alt="" src="public/image-73@2x.png" />
+                  <img class="image-73-icon" alt="" src="public/khiga.png" />
                   <div class="contenthum">
                     <img
                       class="contenthum-child"
@@ -440,7 +456,7 @@
                       src="public/rectangle-1094.svg"
                     />
                     <div class="component-7">
-                      <b class="an-ton">An toàn</b><b class="kh-gas">Khí gas</b>
+                      <b class="an-ton" id="khiga" >An toàn</b><b class="kh-gas">Khí gas</b>
                     </div>
                   </div>
                 </div>
@@ -448,13 +464,13 @@
               <div class="device">
                 <b class="device1">Device 3</b>
                 <div class="row1">
-                  <div class="wifi">
+                  <div class="wifi" id="wifi2">
                     <div class="frame-parent">
                       <div class="wifi-parent">
-                        <img class="wifi-icon" alt="" src="public/wifi.svg" />
+                        <img id="wifi_img2" class="wifi-icon" alt="" src="public/wifi.svg" />
                         <div class="on-off-button">
                           <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="switch_wifi2">
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -462,17 +478,18 @@
                       <b class="wifi1">Wifi</b>
                     </div>
                   </div>
-                  <div class="smartlight">
+                  <div class="smartlight" id ="light2">
                     <div class="frame-group">
-                      <div class="light-on-off-parent">
+                      <div class="light-on-off-parent" >
                         <img
+                          id = "light_img2"
                           class="light-on-off"
                           alt=""
-                          src="public/light--on--off.svg"
+                          src="public/light_off.png"
                         />
                         <div class="on-off-button1">
-                          <label class="toggle-switch">
-                            <input type="checkbox">
+                          <label class="toggle-switch" >
+                            <input type="checkbox" id = "switch_light2" >
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -480,14 +497,14 @@
                       <b class="living-room">Smart Light</b>
                     </div>
                   </div>
-                  <div class="smartair">
+                  <div class="smartair" id="air2">
                     <div class="frame-container">
                       <div class="air-parent">
-                        <img class="air-icon" alt="" src="public/air.svg" />
+                        <img id="air_img2" class="air-icon" alt="" src="public/air.svg" />
                         <div class="on-off-button">
                           <div class="on-off-button-child">
                             <label class="toggle-switch">
-                              <input type="checkbox">
+                              <input id="switch_air2" type="checkbox">
                               <span class="toggle-slider"></span>
                             </label>
                           </div>
@@ -499,17 +516,17 @@
                   </div>
                 </div>
                 <div class="row2">
-                  <div class="music">
+                  <div class="music" id="music2">
                     <div class="frame-div">
                       <div class="fluentmusic-note-2-16-regular-parent">
-                        <img
+                        <img id="music_img2"
                           class="fluentmusic-note-2-16-regular-icon"
                           alt=""
                           src="public/fluentmusicnote216regular.svg"
                         />
                         <div class="on-off-button">
                           <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input id="switch_music2" type="checkbox">
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -517,14 +534,14 @@
                       <b class="living-room">Music</b>
                     </div>
                   </div>
-                  <div class="smarttv">
+                  <div class="smarttv" id="tv2">
                     <div class="frame-parent1">
                       <div class="tv-parent">
-                        <img class="tv-icon" alt="" src="public/tv.svg" />
+                        <img id="tv_img2" class="tv-icon" alt="" src="public/tv.svg" />
                         <div class="on-off-button">
                           <div class="on-off-button-child">
                             <label class="toggle-switch">
-                              <input type="checkbox">
+                              <input id="switch_tv2" type="checkbox">
                               <span class="toggle-slider"></span>
                             </label>
                           </div>
@@ -534,13 +551,13 @@
                       <b class="living-room">Smart TV</b>
                     </div>
                   </div>
-                  <div class="smart-fan">
+                  <div class="smart-fan" id="fan2">
                     <div class="frame-group">
                       <div class="frame-parent3">
-                        <img class="frame-icon" alt="" src="public/frame.svg" />
+                        <img id="fan_img2" class="frame-icon" alt="" src="public/frame.svg" />
                         <div class="on-off-button">
                           <label class="toggle-switch">
-                            <input type="checkbox">
+                            <input id="switch_fan2" type="checkbox">
                             <span class="toggle-slider"></span>
                           </label>
                         </div>
@@ -584,6 +601,11 @@
         </div>
       </div>
     </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="firebase.js"></script>
+    
   </body>
-  <script src="control.js"></script>
+  <script src="main_control.js"></script>
 </html>
