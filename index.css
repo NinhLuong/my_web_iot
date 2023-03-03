@@ -662,8 +662,8 @@ body {
 }
 .thnh-vin-2-child {
   position: absolute;
-  height: 100%;
-  width: 28.65%;
+  height: 100;
+  width: 100;
   top: 0;
   right: 71.35%;
   bottom: 0;
@@ -680,7 +680,7 @@ body {
 }
 .thnh-vin-2 {
   position: relative;
-  width: 349px;
+  width: 400px;
   height: 100px;
   flex-shrink: 0;
 }
